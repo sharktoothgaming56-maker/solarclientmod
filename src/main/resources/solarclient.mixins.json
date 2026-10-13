@@ -1,0 +1,28 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.solarclient.mod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "BlockEntityRenderManagerMixin",
+    "BufferBuilderMixin",
+    "EntityRenderManagerMixin",
+    "EntityRendererMixin",
+    "InactivityFpsLimiterMixin",
+    "IrisButtonMixin",
+    "IrisGuiUtilMixin",
+    "MinecraftClientMixin",
+    "MusicTrackerMixin",
+    "PlayerListHudMixin",
+    "PressableWidgetMixin",
+    "SodiumSectionCacheMixin",
+    "SoundManagerMixin",
+    "SplashOverlayMixin",
+    "TexturedButtonWidgetMixin",
+    "WindowMixin",
+    "WorldMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

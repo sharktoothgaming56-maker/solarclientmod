@@ -1,0 +1,100 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_member.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue000"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_solarplus.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue001"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_verified.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue002"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_admin.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue003"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_owner.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue004"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_member_tab.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue010"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_solarplus_tab.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue011"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_verified_tab.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue012"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_admin_tab.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue013"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_owner_tab.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue014"
+      ]
+    },
+    {
+      "type": "space",
+      "advances": {
+        "\ue0ff": 2
+      }
+    }
+  ]
+}

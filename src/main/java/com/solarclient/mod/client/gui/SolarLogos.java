@@ -1,0 +1,66 @@
+package com.solarclient.mod.client.gui;
+
+import net.minecraft.client.gl.RenderPipelines;
+import net.minecraft.client.gui.DrawContext;
+import net.minecraft.util.Identifier;
+
+/**
+ * Draws the bundled PNG logos under assets/solarclient/textures/gui:
+ * title / pause / keybinds / multiplayer headers, plus the corner
+ * SOLAR CLIENT brand wordmark used on menus and in-game HUD.
+ */
+public final class SolarLogos {
+    public static final Identifier TITLE = Identifier.of("solarclient", "textures/gui/title_logo.png");
+    public static final Identifier GAME_MENU = Identifier.of("solarclient", "textures/gui/game_menu_logo.png");
+    public static final Identifier KEYBINDS = Identifier.of("solarclient", "textures/gui/keybinds_logo.png");
+    public static final Identifier MULTIPLAYER = Identifier.of("solarclient", "textures/gui/multiplayer_logo.png");
+    /** White SOLAR CLIENT mark (planet-O) for corner tags. */
+    public static final Identifier BRAND = Identifier.of("solarclient", "textures/gui/brand_wordmark.png");
+
+    // Native pixel sizes of the supplied PNGs (used for aspect ratio).
+    // These are the alpha-trimmed sizes of the latest artwork drop, so the
+    // drawn logo centres exactly with no invisible padding throwing it off.
+    public static final int TITLE_W = 604, TITLE_H = 126;
+    public static final int GAME_MENU_W = 498, GAME_MENU_H = 113;
+    public static final int KEYBINDS_W = 578, KEYBINDS_H = 94;
+    public static final int MULTIPLAYER_W = 587, MULTIPLAYER_H = 72;
+    public static final int BRAND_W = 942, BRAND_H = 257;
+
+    private SolarLogos() {}
+
+    /**
+     * Draw a logo centred horizontally on cx, with its TOP at y, scaled so
+     * its width is targetWidth (height follows to keep aspect ratio).
+     */
+    public static void drawCentered(DrawContext ctx, Identifier tex, int srcW, int srcH, int cx, int y, int targetWidth) {
+        int w = targetWidth;
+        int h = Math.max(1, (int) ((long) targetWidth * srcH / srcW));
+        int x = cx - w / 2;
+        // width/height = on-screen size; u,v = 0; regionWidth/Height sample
+        // the FULL native texture (srcW×srcH), and textureWidth/Height are
+        // the native texture size — so the whole PNG maps across the drawn
+        // rectangle at any target size.
+        ctx.drawTexture(RenderPipelines.GUI_TEXTURED, tex,
+                x, y, 0f, 0f,
+                w, h,          // on-screen size
+                srcW, srcH,    // region sampled (full texture)
+                srcW, srcH,    // full texture size
+                0xFFFFFFFF);
+    }
+
+    /** Draw the brand wordmark with its top-left at (x, y). */
+    public static void drawBrand(DrawContext ctx, int x, int y, int targetWidth) {
+        int w = targetWidth;
+        int h = Math.max(1, (int) ((long) targetWidth * BRAND_H / BRAND_W));
+        ctx.drawTexture(RenderPipelines.GUI_TEXTURED, BRAND,
+                x, y, 0f, 0f,
+                w, h,
+                BRAND_W, BRAND_H,
+                BRAND_W, BRAND_H,
+                0xFFFFFFFF);
+    }
+
+    public static int brandHeightForWidth(int targetWidth) {
+        return Math.max(1, (int) ((long) targetWidth * BRAND_H / BRAND_W));
+    }
+}
