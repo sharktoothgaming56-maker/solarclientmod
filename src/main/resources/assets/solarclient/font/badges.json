@@ -47,6 +47,15 @@
     },
     {
       "type": "bitmap",
+      "file": "solarclient:font/badge_manager.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue005"
+      ]
+    },
+    {
+      "type": "bitmap",
       "file": "solarclient:font/badge_member_tab.png",
       "ascent": 7,
       "height": 8,
@@ -88,6 +97,15 @@
       "height": 8,
       "chars": [
         "\ue014"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "solarclient:font/badge_manager_tab.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": [
+        "\ue015"
       ]
     },
     {

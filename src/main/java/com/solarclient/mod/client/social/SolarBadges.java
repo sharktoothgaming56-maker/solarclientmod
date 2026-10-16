@@ -47,7 +47,8 @@ public final class SolarBadges {
             "solar+",   "\uE001",
             "verified", "\uE002",
             "admin",    "\uE003",
-            "owner",    "\uE004");
+            "owner",    "\uE004",
+            "manager",  "\uE005");
 
     // A 2px space glyph from the badge font: with the glyph's own 1px
     // spacing it leaves a 3px gap, snugger than a full-width space.
